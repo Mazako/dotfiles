@@ -17,8 +17,8 @@ install_base() {
   log "Updating system and installing base packages..."
   sudo pacman -Syu --noconfirm
   sudo pacman -S --needed --noconfirm \
-    base-devel zsh git curl wget openssl zlib xz tk zstd \
-    nvidia nvidia-utils vim btop neofetch vlc
+    base-devel zsh git curl wget openssl zlib xz tk zstd eza\
+    nvidia nvidia-utils vim btop neofetch vlc kitty zip unzip
 }
 
 enable_multilib() {
