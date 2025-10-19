@@ -52,17 +52,17 @@ install_aur_apps() {
 
 install_dev_tools() {
   log "Installing developer tools (fnm, sdkman, pyenv, docker)..."
-  
+
   git config --global user.email "michal.maziarz12@gmail.com"
   git config --global user.name "Mazako"
-  
+
   curl -fsSL https://fnm.vercel.app/install | bash
   curl -s "https://get.sdkman.io" | bash
   curl -fsSL https://pyenv.run | bash
 
-  sudo pacman -S --needed --noconfirm docker docker-compose docker-buildx
+  sudo pacman -S --needed --noconfirm docker docker-compose docker-buildx shellcheck
   sudo systemctl enable --now docker
-  sudo usermod -aG docker $USER
+  sudo usermod -aG docker "$USER"
 
   log "Docker enabled and added $USER to docker group (relogin required)."
 }
