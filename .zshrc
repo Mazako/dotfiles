@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=$HOME/jetbrains-toolbox/bin:$PATH
+export PATH=$HOME/jetbrains-toolbox/bin:$HOME/.local/share/JetBrains/Toolbox/scripts:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -107,6 +107,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cat="bat"
+alias fastfetch="fastfetch --logo ~/.config/fastfetch/img.jpg --logo-type kitty --logo-width 60 --logo-height 30"
 
 # SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"

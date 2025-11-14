@@ -16,7 +16,9 @@ error() {
 install_base() {
   log "Updating system and installing base packages..."
   sudo pacman -Syu --noconfirm
-  sudo pacman -S --needed --noconfirm base-devel zsh git curl wget openssl zlib xz tk zstd eza nvidia nvidia-utils vim btop neofetch vlc kitty zip unzip cava
+  sudo pacman -S --needed --noconfirm \
+    base-devel zsh git curl wget openssl zlib xz tk zstd eza nvidia nvidia-utils vim \
+    btop neofetch vlc kitty zip unzip cava duf bat dust lazydocker lazygit
 }
 
 enable_multilib() {
