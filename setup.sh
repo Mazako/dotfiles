@@ -115,6 +115,11 @@ install_jetbrains_toolbox() {
   log "Toolbox installed successfully"
 }
 
+tweak_gnome() {
+  gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
+  gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab', '<Super>Tab']"
+}
+
 main() {
   install_base
   enable_multilib
@@ -125,6 +130,7 @@ main() {
   setup_ssh_key
   install_jetbrains_toolbox
   install_zsh
+  tweak_gnome
 
   log "✅ All tasks completed!"
   echo "➡️  Relog or restart to finalize Docker and Zsh setup."
